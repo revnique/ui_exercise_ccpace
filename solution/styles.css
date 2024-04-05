@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Roboto;
+    src: url('Roboto/Roboto-Regular.ttf') format("truetype");
+  }
+  
+html, body, div, span{
+    font-family: "Roboto";
+}
+
+.main-container{
+    padding:15px;
+}
+.header{
+    font-weight: bold;
+    font-size: 32px;
+    padding: 5px;
+}
+.sub-header{
+    font-size: 16px;
+    padding: 5px;
+}
+.input-label{
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.form-container{
+    padding: 5px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+}
+.border-box{
+    border: 1px solid #aaa;
+    padding: 5px;
+    min-height: 50px;
+}
+input[type="text"]{
+    font-size: 14px;
+    padding: 5px;
+    width: 270px;
+    margin-bottom: 5px;
+}
+label{
+    font-size: 12px;
+    cursor: pointer;
+}
+.error-message{
+    font-size: 12px;
+    padding-top: 5px;
+    display: none;
+}
+.error-message.error{
+    display: block;
+    color: #990000;
+}
+.form-image-container{
+    background-color: rgb(214, 230, 239);
+    min-width: 320px;
+    flex-shrink: 1;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.image-label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.bottom-form{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.form-input-container{
+    flex-grow: 1;
+    min-width: 300px;
+}
+.submit-button{
+    text-transform: uppercase;
+    width: 200px;
+    color: #efefef;
+    background-color: rgb(71, 161, 157);
+    padding: 15px;
+    font-size: 14px;
+    border:none;
+}
+.submit-button:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 680px) {
+    .bottom-form {flex-direction: column;}
+    .button-container{text-align: center; width:100%;}
+}

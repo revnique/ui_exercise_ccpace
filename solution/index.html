@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>One-time Loan Payment</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">One-time Loan Payment</div>
+        <div class="sub-header">Fill out the form below to complete your payment.</div>
+        <form class="form-container" name="frm">
+            <div class="border-box">
+                <div class="input-label">
+                    Loan Account Number
+                </div>
+                <input type="text" id="txtLoanAccountNumber" /> 
+            </div>
+            <div class="bottom-form">
+                <div class="form-input-container">
+                    <div class="border-box">
+                        <div class="input-label">
+                            Type of Account:
+                        </div>
+                        <input type="radio" id="rdoChecking" name="account_type" value="Checking" onclick="handleClick(this);" checked>
+                        <label for="rdoChecking">Checking</label>
+                        <input type="radio" id="rdoDebitCard" name="account_type" value="Debit" onclick="handleClick(this);">
+                        <label for="rdoDebitCard">Debit</label>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="border-box">
+                        <div class="input-label">
+                            Routing Number
+                        </div>
+                        <input type="text" id="txtRoutingNumber" /> 
+                        <div class="error-message">Routing Number is required</div>
+                    </div>
+                    <div class="border-box">
+                        <div class="input-label">
+                            Bank Account Number
+                        </div>
+                        <input type="text" id="txtBankAccountNumber" /> 
+                        <div class="error-message">Bank Account Number is required</div>
+                    </div>
+                    <div class="border-box">
+                        <div class="input-label">
+                            Confirm Bank Account Number
+                        </div>
+                        <input type="text" id="txtConfirmBankAccountNumber" />
+                        <div class="error-message">Confirm Bank Account Number is required</div>
+                    </div>
+                </div>
+                <div class="form-image-container">
+                    <div>
+                        <div class="image-label" id="accountImageLabel">Where can I find the routing<br>and account number?</div>
+                        <div>
+                            <img src="check.png" id="accountImage" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="submit-button" type="button" onClick="validate()">Make Payment</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
