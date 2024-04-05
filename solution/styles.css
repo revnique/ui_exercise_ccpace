@@ -37,7 +37,7 @@ html, body, div, span{
     min-height: 50px;
 }
 input[type="text"]{
-    font-size: 14px;
+    font-size: 18px;
     padding: 5px;
     width: 270px;
     margin-bottom: 5px;
@@ -81,7 +81,7 @@ label{
 .submit-button{
     text-transform: uppercase;
     width: 200px;
-    color: #efefef;
+    color: #fff;
     background-color: rgb(71, 161, 157);
     padding: 15px;
     font-size: 14px;
@@ -91,7 +91,10 @@ label{
     opacity: .8;
     cursor: pointer;
 }
-
+.expiry-form{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 @media screen and (max-width: 680px) {
     .bottom-form {flex-direction: column;}

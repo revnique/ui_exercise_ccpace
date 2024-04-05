@@ -14,7 +14,8 @@
                 <div class="input-label">
                     Loan Account Number
                 </div>
-                <input type="text" id="txtLoanAccountNumber" /> 
+                <input type="text" id="txtLoanAccountNumber" name="txtLoanAccountNumber" maxlength="25" /> 
+                <div class="error-message" id="txtLoanAccountNumberError">Loan Account Number is required</div>
             </div>
             <div class="bottom-form">
                 <div class="form-input-container">
@@ -22,32 +23,66 @@
                         <div class="input-label">
                             Type of Account:
                         </div>
-                        <input type="radio" id="rdoChecking" name="account_type" value="Checking" onclick="handleClick(this);" checked>
+                        <input type="radio" id="rdoChecking" name="account_type" value="Checking" onclick="handleClick(this.value);">
                         <label for="rdoChecking">Checking</label>
-                        <input type="radio" id="rdoDebitCard" name="account_type" value="Debit" onclick="handleClick(this);">
+                        <input type="radio" id="rdoDebitCard" name="account_type" value="Debit" onclick="handleClick(this.value);">
                         <label for="rdoDebitCard">Debit</label>
                         <div class="error-message"></div>
                     </div>
-                    <div class="border-box">
-                        <div class="input-label">
-                            Routing Number
+                    <div id="checkForm">
+                        <div class="border-box">
+                            <div class="input-label">
+                                Routing Number
+                            </div>
+                            <input type="text" id="txtRoutingNumber" name="txtRoutingNumber" maxlength="9" /> 
+                            <div class="error-message" id="txtRoutingNumberError">Routing Number is required</div>
                         </div>
-                        <input type="text" id="txtRoutingNumber" /> 
-                        <div class="error-message">Routing Number is required</div>
+                        <div class="border-box">
+                            <div class="input-label">
+                                Bank Account Number
+                            </div>
+                            <input type="text" id="txtBankAccountNumber" name="txtBankAccountNumber" maxlength="25" /> 
+                            <div class="error-message" id="txtBankAccountNumberError">Bank Account Number is required</div>
+                        </div>
+                        <div class="border-box">
+                            <div class="input-label">
+                                Confirm Bank Account Number
+                            </div>
+                            <input type="text" id="txtConfirmBankAccountNumber" name="txtConfirmBankAccountNumber" maxlength="25" />
+                            <div class="error-message" id="txtConfirmBankAccountNumberError">Confirm Bank Account Number is required</div>
+                        </div>
                     </div>
-                    <div class="border-box">
-                        <div class="input-label">
-                            Bank Account Number
+                    <div id="debitForm">
+                        <div class="border-box">
+                            <div class="input-label">
+                                Card Number
+                            </div>
+                            <input type="text" id="txtCardNumber" name="txtCardNumber" maxlength="16" /> 
+                            <div class="error-message" id="txtCardNumberError">Card Number is required</div>
                         </div>
-                        <input type="text" id="txtBankAccountNumber" /> 
-                        <div class="error-message">Bank Account Number is required</div>
-                    </div>
-                    <div class="border-box">
-                        <div class="input-label">
-                            Confirm Bank Account Number
+                        <div class="border-box">
+                            <div class="input-label">
+                                Name on Card
+                            </div>
+                            <input type="text" id="txtNameOnCard" name="txtNameOnCard" maxlength="40" /> 
+                            <div class="error-message" id="txtNameOnCardError">Name on Card is required</div>
                         </div>
-                        <input type="text" id="txtConfirmBankAccountNumber" />
-                        <div class="error-message">Confirm Bank Account Number is required</div>
+                        <div class="expiry-form">
+                            <div class="border-box" style="flex-grow: 1;">
+                                <div class="input-label">
+                                    Expiration Date
+                                </div>
+                                <input type="text" id="txtExpirationDate" name="txtExpirationDate" maxlength="25" />
+                                <div class="error-message" id="txtExpirationDateError">Expiration Date is required</div>
+                            </div>
+                            <div class="border-box" style="flex-grow: 1;">
+                                <div class="input-label">
+                                    CVV
+                                </div>
+                                <input type="text" id="txtCVV" name="txtCVV" maxlength="3" />
+                                <div class="error-message" id="txtCVVError">CVV is required</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="form-image-container">
@@ -60,7 +95,7 @@
                 </div>
             </div>
             <div class="button-container">
-                <button class="submit-button" type="button" onClick="validate()">Make Payment</button>
+                <button class="submit-button" type="button" onClick="validate();">Make Payment</button>
             </div>
         </form>
     </div>
