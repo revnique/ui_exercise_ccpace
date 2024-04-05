@@ -4,3 +4,4 @@
 - I have used React for almost 5 years
 - I wanted to demonstrate that I still know how things work at a base level
 - Responsiveness happens at width of 680px;
+- file:///./ui_exercise_ccpace/solution/index.html
