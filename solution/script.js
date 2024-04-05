@@ -1,4 +1,5 @@
 
+const frm = document.getElementById("frm");
 
 const checkForm = document.getElementById("checkForm");
 const debitForm = document.getElementById("debitForm");
@@ -26,7 +27,6 @@ const txtCVVError = document.getElementById("txtCVVError");
 
 const txtExpirationDate = document.getElementById("txtExpirationDate");
 const txtExpirationDateError = document.getElementById("txtExpirationDateError");
-
 
 const rdoChecking = document.getElementById("rdoChecking");
 const rdoDebitCard = document.getElementById("rdoDebitCard");
@@ -79,6 +79,22 @@ var handleClick = function (val) {
         checkForm.style.display = 'block';
         rdoDebitCard.checked = false;
         rdoChecking.checked = true;
+    }
+}
+
+var formSubmit = function (){
+    if(validate()){
+        var formData = new FormData(frm);
+        // output as an object
+        console.log(Object.fromEntries(formData));
+
+        // iterate through the name-value pairs
+        for (var pair of formData.entries()) {
+            console.log(pair[0] + ": " + pair[1]);
+        }
+
+        //then submit to backend
+        // callToBackend(formData);
     }
 }
 
