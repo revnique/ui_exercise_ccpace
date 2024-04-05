@@ -2,14 +2,19 @@
 
 const checkForm = document.getElementById("checkForm");
 const debitForm = document.getElementById("debitForm");
+
 const accountImage = document.getElementById("accountImage");
 const accountImageLabel = document.getElementById("accountImageLabel");
+
 const txtLoanAccountNumber = document.getElementById("txtLoanAccountNumber");
 const txtLoanAccountNumberError = document.getElementById("txtLoanAccountNumberError");
+
 const txtRoutingNumber = document.getElementById("txtRoutingNumber");
 const txtRoutingNumberError = document.getElementById("txtRoutingNumberError");
+
 const txtConfirmBankAccountNumber = document.getElementById("txtConfirmBankAccountNumber");
 const txtConfirmBankAccountNumberError = document.getElementById("txtConfirmBankAccountNumberError");
+
 const txtCardNumber = document.getElementById("txtCardNumber");
 const txtCardNumberError = document.getElementById("txtCardNumberError");
 
@@ -25,39 +30,6 @@ const txtExpirationDateError = document.getElementById("txtExpirationDateError")
 
 const rdoChecking = document.getElementById("rdoChecking");
 const rdoDebitCard = document.getElementById("rdoDebitCard");
-
-// const txtLoanAccountNumber = document.getElementById("txtLoanAccountNumber");
-// const txtLoanAccountNumber = document.getElementById("txtLoanAccountNumber");
-// const txtLoanAccountNumber = document.getElementById("txtLoanAccountNumber");
-// const txtLoanAccountNumber = document.getElementById("txtLoanAccountNumber");
-// const txtLoanAccountNumber = document.getElementById("txtLoanAccountNumber");
-// const txtLoanAccountNumber = document.getElementById("txtLoanAccountNumber");
-// const txtLoanAccountNumber = document.getElementById("txtLoanAccountNumber");
-// const txtLoanAccountNumber = document.getElementById("txtLoanAccountNumber");
-// const txtLoanAccountNumber = document.getElementById("txtLoanAccountNumber");
-// const txtLoanAccountNumber = document.getElementById("txtLoanAccountNumber");
-
-
-
-// <input type="text" id="" maxlength="25" /> 
-// <div class="error-message" id="txtRoutingNumberError">Routing Number is required</div>
-// </div>
-// <div class="border-box">
-// <div class="input-label">
-//     Bank Account Number
-// </div>
-// <input type="text" id="txtBankAccountNumber" maxlength="25" /> 
-// <div class="error-message" id="txtBankAccountNumbeErrorr">Bank Account Number is required</div>
-// </div>
-// <div class="border-box">
-// <div class="input-label">
-//     Confirm Bank Account Number
-// </div>
-// <input type="text" id="txtConfirmBankAccountNumber" maxlength="25" />
-// <div class="error-message" id="txtConfirmBankAccountNumberError">Confirm Bank Account Number is required</div>
-// </div>
-// </div>
-
 
 
 var addClass = function(elements, myClass) {
@@ -234,7 +206,6 @@ var isInvalidMessage = function(message){
 
 var isAllNumeric = function (val){
     let isnum = /^\d+$/.test(val);
-    console.log("isAllNumeric", isnum);
     return isnum;
 }
 
